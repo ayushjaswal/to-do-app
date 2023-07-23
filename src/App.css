@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(-45deg, rgba(21, 255, 0, 0.387), rgba(248, 252, 0, 0.265), #ff00003d);
+	background-size: 400% 400%;
+    animation: grad 5s ease infinite;
+}
+.parent h1{
+    margin: 1rem;
+    text-align: center;
+}
+.frame{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.196);
+    border: 1px solid rgba(255, 255, 255, 0.546);
+    border-radius: 15px;
+    max-width: 380px;
+    transition: 200ms ease-in-out;
+}
+.frame:hover{
+    box-shadow: 0 0 1000px 5px rgba(28, 28, 28, 0.306);
+}
+.frame input{
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    border-radius: 10px 0 0 10px;
+    outline-width: 0;
+    border: none;
+    padding: 10px;
+    background-color: rgba(152, 152, 152, 0.326);
+    color: #000000;
+}
+.frame button{
+    font-size: 1.4rem;
+    padding: 10px;
+    border: 0;
+    border-radius:  0 10px 10px 0;
+    transition: 200ms ease-in-out;
+}
+.frame button:hover{
+    cursor: pointer;
+    background-color: rgb(216, 216, 216);
+}
+.lists{
+    width: 100%;
+}
+.todo{
+    background-color: rgba(206, 206, 206, 0.356);
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin: 10px;
+    border-radius: 10px;
+    transition: 200ms ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.461);
+    backdrop-filter: blur(5px);
+    word-wrap: break-word;
+}
+.todo:hover{
+    transform: scale(1.03);
+}
+.todo button{
+    display: block;
+    position: relative;
+    background-color: rgb(0, 255, 38);
+    transition: 200ms ease-in-out;
+    border: 1px solid rgba(0, 128, 0, 0.347);
+    color:black;
+    bottom: unset;
+    border-radius: 10px;
+    font-size: 1rem;
+    width: 100px;
+    height: 30px;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo:hover button{
+    background-color: rgb(2, 206, 33);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes grad {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
